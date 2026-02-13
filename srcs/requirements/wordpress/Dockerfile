@@ -4,6 +4,7 @@ RUN apt-get update
 RUN apt-get -y upgrade 
 RUN apt-get -y install php8.2-fpm php8.2-mysqli curl
 
+RUN mkdir -p /run/php && chown -R www-data:www-data /run/php
 COPY www.conf /etc/php/8.2/fpm/pool.d/.
 COPY ./tools/wordpress-entrypoint.sh .
 RUN chmod +x wordpress-entrypoint.sh
