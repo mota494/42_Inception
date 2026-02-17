@@ -34,3 +34,14 @@ Running `make` on the root of this repository will build the stack using the `do
 
 # Debugging
 
+If anything goes wrong there are some easy commands that one can run, namely:
+
+`docker logs ${container name}` -> let's you see the logs of the container 
+
+`docker exec -it ${container name} /bin/sh` -> let's you into the bash of the respective container
+
+`docker volumes ls` -> let's you check the volumes 
+
+# Data
+
+The volumes and files of the containers are stored inside your $HOME/Inception_data folder, after building these locations will be restricted and can only be deleted through a priviliged user
