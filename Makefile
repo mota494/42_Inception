@@ -14,7 +14,7 @@ cleandirs:
 clean: cleandirs down
 
 fclean: cleandirs
-	docker system prune
+	docker system prune -a --volumes
 
 build : 
 	docker compose -f ./srcs/docker-compose.yml build
